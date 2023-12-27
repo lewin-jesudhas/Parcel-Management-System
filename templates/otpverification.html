@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h1>OTP Verification</h1>
+    <form method="POST" action="{{ url_for('otp_verification') }}">
+        <input type="hidden" name="original_otp" value="{{ otp }}">
+        <input type="hidden" name="tracking_id" value="{{ tracking_id }}">
+        <label for="otp">Enter the OTP:</label>
+        <input type="text" id="otp" name="otp" required>
+        <input type="submit" value="Verify OTP">
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .button-container a {
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .logout-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .logout-link:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+        <div class="button-container">
+            <a href="/employee/generateid" class="button">Generate New ID</a>
+            <a href="/employee/scanqrlocation" class="button">Update Location</a>
+            <a href="/employee/readqr" class="button">Delivery</a>
+            <!-- <a href="/employee/reschedule" class="button">Reschedule Request</a> -->
+            <a href="/employee/datewisedelivery" class="button">Datewise Delivery</a>
+            <a href="/employee/customerdetails" class="button">Enter Customer Details</a>
+        </div>
+        <a href="{{ url_for('employee_login') }}" class="logout-link">Logout</a>
+    </div>
+</body>
+</html>

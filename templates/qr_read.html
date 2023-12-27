@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .scanner-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 250px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .scanner-button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-text {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Scanner</h1>
+    <div>
+        <form method="POST" action="{{ url_for('scan_qr') }}">
+            <button class="scanner-button" type="submit">
+                <span class="button-text">Scan QR</span>
+                <img src="{{ url_for('static', filename='scanner-icon.png') }}" alt="Scanner Icon" style="height: 125px; margin-top: 10px;">
+            </button>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Login</title>
+     <style>
+         body {
+             font-family: Arial, sans-serif;
+             background-color: #f2f2f2;
+             background-image: url("../static/stcourier-transformed.png");
+             margin: 0;
+             padding: 0;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+         }
+ 
+         .container {
+             max-width: 400px;
+             padding: 40px;
+             background-color: #ff000054;
+             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+             border-radius: 4px;
+         }
+ 
+         h1 {
+             text-align: center;
+             margin-bottom: 30px;
+         }
+ 
+         form {
+             display: flex;
+             flex-direction: column;
+         }
+ 
+         label {
+             font-weight: bold;
+             margin-bottom: 8px;
+         }
+ 
+         input[type="text"],
+         input[type="password"] {
+             padding: 10px;
+             margin-bottom: 20px;
+             border: 1px solid #ccc;
+             border-radius: 4px;
+         }
+ 
+         .button-wrapper {
+             display: flex;
+             justify-content: center;
+         }
+ 
+         input[type="submit"] {
+             padding: 12px 20px;
+             background-color: #3030cb;
+             color: white;
+             border: none;
+             border-radius: 4px;
+             cursor: pointer;
+             font-size: 16px;
+         }
+ 
+         input[type="submit"]:hover {
+             background-color: #45a049;
+         }
+ 
+         p.error {
+             color: #ff0000;
+             margin-top: 10px;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <h1>Login</h1>
+         <form method="POST" action="{{ url_for('employee_login') }}">
+             <div>
+                 <label for="employee_id">Employee ID:</label>
+                 <input type="text" id="employee_id" name="Employee ID" required>
+             </div>
+             <div>
+                 <label for="password">Password:</label>
+                 <input type="password" id="password" name="Password" required>
+             </div>
+             <div class="button-wrapper">
+                 <input type="submit" value="Login">
+             </div>
+         </form>
+         {% if error %}
+         <p class="error">{{ error }}</p>
+         {% endif %}
+     </div>
+ </body>
+ </html>
+ 
+ 

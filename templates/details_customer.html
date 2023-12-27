@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parcel Details</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    section.details {
+      padding: 50px;
+      text-align: center;
+    }
+    
+    h2 {
+      margin-bottom: 30px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    th {
+      text-align: left;
+    }
+    
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Courier Service</h1>
+    </nav>
+  </header>
+
+  <section class="details">
+    <h2>Parcel Details</h2>
+    {% if error_message %}
+      <p style="color: red;">{{ error_message }}</p>
+    {% else %}
+    <table>
+      <tr>
+        <th>Sender Name</th>
+        <td>{{ data[0] }}</td>
+      </tr>
+      <tr>
+        <th>Sender Phone</th>
+        <td>{{ data[1] }}</td>
+      </tr>
+      <tr>
+        <th>Sender Location</th>
+        <td>{{ data[2] }}</td>
+      </tr>
+      <tr>
+        <th>Receiver Address</th>
+        <td>{{ data[3] }}</td>
+      </tr>
+      <tr>
+        <th>Receiver Phone</th>
+        <td>{{ data[4] }}</td>
+      </tr>
+      <tr>
+        <th>Current Location</th>
+        <td>{{ data[5] }}</td>
+      </tr>
+    </table>
+    {% endif %}
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Courier Service. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courier Service</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+    
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    
+    section.hero {
+      background-color: #f4f4f4;
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .tracking-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    
+    .tracking-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tracking-section input[type="text"] {
+      width: 300px;
+      height: 40px;
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .tracking-section button {
+      width: 150px;
+      height: 40px;
+      margin-top: 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    .tracking-code {
+      text-align: center;
+    }
+    
+    .tracking-code h3 {
+      font-size: 18px;
+    }
+    
+    .tracking-code p {
+      font-size: 16px;
+    }
+    
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>ST Courier Service</h1>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tracking-section">
+      <form action="{{ url_for('track') }}" method="POST">
+        <h2>Track Your Parcel</h2>
+        <input type="text" name="tracking_id" placeholder="Enter tracking ID">
+        <button type="submit">Track</button>
+      </form>
+    </div>
+    <div class="tracking-code">
+      <h3>Tracking Code:</h3>
+      <p>Your tracking code goes here</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 ST Courier Service. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+

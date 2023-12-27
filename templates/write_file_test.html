@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            background-image: url("../static/addresspagepic.jpg");
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff6;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #2320ed;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Address Form</h1>
+    <form action="/employee/submit" method="post">
+        <label for="sender_name">Sender Name:</label>
+        <input type="text" id="sender_name" name="sender_name" required><br>
+
+        <label for="sender_phone">Sender Phone:</label>
+        <input type="text" id="sender_phone" name="sender_phone" required><br>
+
+        <label for="sender_location">Sender Location:</label>
+        <input type="text" id="sender_location" name="sender_location" required><br>
+
+        <label for="receiver_address">Receiver Address:</label>
+        <input type="text" id="receiver_address" name="receiver_address" required><br>
+
+        <label for="receiver_phone">Receiver Phone:</label>
+        <input type="text" id="receiver_phone" name="receiver_phone" required><br>
+
+        <label for="current_location">Current Location:</label>
+        <input type="text" id="current_location" name="current_location" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

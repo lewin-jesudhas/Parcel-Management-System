@@ -1,0 +1,179 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Review</title>
+    <style>
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            display: inline-block;
+            font-size: 25px;
+            padding: 5px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating input:checked ~ label {
+            color: #ffba00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Review Form</h1>
+    <form action="{{ url_for('submit_review') }}" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <div class="rating">
+            <input type="radio" name="rating" id="star5" value="5" required/>
+            <label for="star5">&#9733;</label>
+            <input type="radio" name="rating" id="star4" value="4"/>
+            <label for="star4">&#9733;</label>
+            <input type="radio" name="rating" id="star3" value="3"/>
+            <label for="star3">&#9733;</label>
+            <input type="radio" name="rating" id="star2" value="2"/>
+            <label for="star2">&#9733;</label>
+            <input type="radio" name="rating" id="star1" value="1"/>
+            <label for="star1">&#9733;</label>
+        </div><br><br>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea><br><br>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            background-image: url("../static/pexels-codioful-(formerly-gradienta)-7130498.jpg");
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #e993ed78;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            display: inline-block;
+            font-size: 30px;
+            padding: 5px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating input:checked ~ label {
+            color: #ffba00;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Review Form</h1>
+    <form action="{{ url_for('submit_review') }}" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <div class="rating">
+            <input type="radio" name="rating" id="star5" value="5" required/>
+            <label for="star5">&#9733;</label>
+            <input type="radio" name="rating" id="star4" value="4"/>
+            <label for="star4">&#9733;</label>
+            <input type="radio" name="rating" id="star3" value="3"/>
+            <label for="star3">&#9733;</label>
+            <input type="radio" name="rating" id="star2" value="2"/>
+            <label for="star2">&#9733;</label>
+            <input type="radio" name="rating" id="star1" value="1"/>
+            <label for="star1">&#9733;</label>
+        </div>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" required></textarea><br><br>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reschedule Delivery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #d3d3d3;
+            background-color: #205eba;
+            padding: 20px;
+            margin-top: 0;
+            
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            text-align: left;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            transition: background-color 0.3s;
+        }
+
+        input[type="text"]:hover,
+        input[type="date"]:hover {
+            background-color: #f2f2f2;
+        }
+
+        input[type="submit"] {
+            background-color: #176CC6;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function validateDate() {
+            var rescheduledDate = document.getElementById("rescheduled_date").value;
+            var currentDate = new Date().toISOString().split("T")[0];
+            
+            if (rescheduledDate === "" || rescheduledDate < currentDate) {
+                alert("Please select a valid future date for rescheduling.");
+                return false;
+            }
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="{{ url_for('reschedule_delivery') }}" onsubmit="return validateDate();">
+            <h1>Reschedule Delivery</h1>
+            <label for="tracking_id">Tracking ID:</label>
+            <input type="text" id="tracking_id" name="tracking_id" required>
+
+            <label for="rescheduled_date">Rescheduled Date:</label>
+            <input type="date" id="rescheduled_date" name="rescheduled_date" required>
+
+            <br><br>
+            <input type="submit" value="Reschedule">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ST Courier</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    #header {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #hero {
+      background-image: url("{{ url_for('static', filename='parcel.jpg') }}");
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    #hero h2 {
+      color: #1512c4;
+      font-size: 36px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    #services {
+      padding: 40px;
+      text-align: center;
+    }
+
+    #services h3 {
+      color: #0066cc;
+    }
+
+    .service {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .service img {
+      width: 120px;
+      height: 120px;
+      margin-right: 20px;
+    }
+
+    .service p {
+      margin: 0;
+    }
+
+    #footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <h1>ST Courier</h1>
+    <p>Fast and Reliable Delivery Services</p>
+    <a href="trackparcel"><button>Track your Parcel</button></a>
+    <!-- <a href="rescheduledelivery"><button>Reschedule Delivery</button></a> -->
+    <a href="aboutus"><button>About Us</button></a>
+    <a href="contact"><button>Contact Us</button></a>
+    <a href="feedback"><button>Give feedback</button></a>
+  </div>
+
+  <div id="hero">
+    <h2>Efficient Delivery Solutions<br>for Your Business</h2>
+  </div>
+
+  <div id="services">
+    <h3>Our Services</h3>
+
+    <div class="service">
+      <img src="{{ url_for('static', filename='express-delivery.png') }}" alt="Express Delivery">
+      <div>
+        <h4>Express Delivery</h4>
+        <p>Get your packages delivered quickly with our express delivery service.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="{{ url_for('static', filename='tracking.png') }}" alt="Package Tracking">
+      <div>
+        <h4>Package Tracking</h4>
+        <p>Track your packages in real-time and stay updated on their status.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="{{ url_for('static', filename='secure-delivery.png') }}" alt="Secure Delivery">
+      <div>
+        <h4>Secure Delivery</h4>
+        <p>We prioritize the security of your packages throughout the delivery process.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>&copy; 2023 ST Courier. All rights reserved.</p>
+  </div>
+</body>
+</html>
