@@ -1,5 +1,5 @@
 from twilio.rest import Client
-import cv2
+# import cv2
 import random
 from abc import ABC, abstractmethod
 from AbstractQRHandler import AbstractQRHandler
