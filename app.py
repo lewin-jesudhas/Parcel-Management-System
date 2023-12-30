@@ -6,7 +6,7 @@ import random
 import string
 import os
 import datetime
-import cv2
+# import cv2
 import json
 import re
 from JSONHandler import JSONHandler
