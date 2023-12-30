@@ -4,8 +4,8 @@ import random
 from abc import ABC, abstractmethod
 from AbstractQRHandler import AbstractQRHandler
 
-account_sid = 'account_sid'
-auth_token = 'auth_token'
+account_sid = 'AC29747632c3c6384a632850475540b693'
+auth_token = '3e1baf5117e3e2f8085fd8a9bcbd2274'
 detector = cv2.QRCodeDetector()
 client = Client(account_sid, auth_token)
 
@@ -30,7 +30,7 @@ class OTPNotifier:
 
 class OTPWhatsAppObserver(Observer):
     def update(self, otp, tracking_id):
-        self.send_otp_via_whatsapp('whatsapp:"your phone number"', otp)
+        self.send_otp_via_whatsapp('whatsapp:+919449225710', otp)
 
     def send_otp_via_whatsapp(self, to, otp):
         # Sending the OTP using twilio on WhatsApp
